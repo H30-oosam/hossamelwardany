@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>الإعدادات | حسام الورداني</title><link rel="stylesheet" href="assets/style.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body class="admin-shell">
+<div id="loginGate" class="login-gate"><div class="login-card"><h1>الإعدادات</h1><p>تسجيل الدخول لتعديل بيانات الموقع</p><input id="adminPassword" type="password" autocomplete="current-password" placeholder="كلمة المرور"><button id="loginBtn" class="btn btn-primary">دخول</button><p id="loginError" class="error" hidden>كلمة المرور غير صحيحة</p></div></div>
+<div id="settingsApp" hidden>
+<header class="admin-nav"><div class="container"><div><b>إعدادات الموقع</b><small>نسخة محتوى بسيطة — التخزين محلي على هذا الجهاز</small></div><div><a class="btn btn-light" href="index.html">عرض الموقع</a><button id="logoutBtn" class="small-btn">تسجيل الخروج</button></div></div></header>
+<main class="admin-main"><div class="container">
+<nav class="settings-tabs"><button type="button" data-tab="identity" class="active">الهوية والتواصل</button><button type="button" data-tab="services">الخدمات</button><button type="button" data-tab="projects">المشروعات</button><button type="button" data-tab="books">الكتب</button><button type="button" data-tab="certificates">الشهادات</button><button type="button" data-tab="articles">المقالات</button><button type="button" data-tab="security">الأمان</button></nav>
+<section class="admin-panel settings-panel" data-panel="identity"><h2>الهوية وبيانات التواصل</h2><div class="form-grid">
+<div class="field"><label>الاسم بالعربية</label><input id="nameAr"></div><div class="field"><label>الاسم بالإنجليزية</label><input id="nameEn"></div>
+<div class="field full"><label>المسمى المهني</label><input id="professionalTitle"></div>
+<div class="field"><label>رقم الهاتف</label><input id="phone" inputmode="tel"></div><div class="field"><label>البريد الإلكتروني</label><input id="email" type="email"></div>
+<div class="field"><label>WhatsApp بالصيغة الدولية</label><input id="whatsapp" inputmode="tel" placeholder="201200716861"></div><div class="field"><label>العنوان</label><input id="address"></div>
+<div class="field"><label>LinkedIn</label><input id="linkedin" type="url" placeholder="https://..."></div><div class="field"><label>Facebook</label><input id="facebook" type="url" placeholder="https://..."></div>
+<div class="field"><label>Instagram</label><input id="instagram" type="url" placeholder="https://..."></div><div class="field"><label>صورة الملف الشخصي (رابط أو صورة رفع من نوع data)</label><input id="profileImage" type="text" placeholder="assets/profile.jpg"></div>
+<div class="field full"><label>روابط واتساب والبريد ورقم الهاتف قابلة للتعديل أعلاه.</label></div>
+<div class="field full"><label>نبذة مختصرة</label><textarea id="bio"></textarea></div><div class="field full"><label>نبذة شخصية طويلة</label><textarea id="about"></textarea></div>
+<div class="field full"><label>صورة الغلاف (رابط ملف)</label><input id="coverImage" type="text" placeholder="assets/cover.jpg"></div>
+</div><button class="btn btn-primary" data-save="identity">حفظ بيانات الهوية والتواصل</button></section>
+<section class="admin-panel settings-panel" data-panel="services" hidden><h2>الخدمات</h2><div id="serviceEditor"></div><button class="small-btn" id="addService">إضافة خدمة</button> <button class="btn btn-primary" data-save="lists">حفظ الخدمات</button></section>
+<section class="admin-panel settings-panel" data-panel="projects" hidden><h2>المشروعات</h2><div id="projectEditor"></div><button class="small-btn" id="addProject">إضافة مشروع</button> <button class="btn btn-primary" data-save="lists">حفظ المشروعات</button></section>
+<section class="admin-panel settings-panel" data-panel="books" hidden><h2>الكتب والمشروعات الفكرية</h2><div id="bookEditor"></div><button class="small-btn" id="addBook">إضافة كتاب</button> <button class="btn btn-primary" data-save="lists">حفظ الكتب</button></section>
+<section class="admin-panel settings-panel" data-panel="certificates" hidden><h2>الشهادات</h2><div id="certificateEditor"></div><button class="small-btn" id="addCertificate">إضافة شهادة</button> <button class="btn btn-primary" data-save="lists">حفظ الشهادات</button></section>
+<section class="admin-panel settings-panel" data-panel="articles" hidden><h2>المقالات</h2><div id="articleEditor"></div><button class="small-btn" id="addArticle">إضافة مقال</button> <button class="btn btn-primary" data-save="lists">حفظ المقالات</button></section>
+<section class="admin-panel settings-panel" data-panel="security" hidden><h2>الأمان</h2><div class="form-grid"><div class="field full"><label>Current Password</label><input id="currentPassword" type="password" autocomplete="current-password"></div><div class="field full"><label>New Password</label><input id="newPassword" type="password" autocomplete="new-password"></div><div class="field full"><label>Confirm Password</label><input id="confirmPassword" type="password" autocomplete="new-password"></div></div><button id="changePassword" class="btn btn-primary">تغيير كلمة المرور</button><p id="passwordStatus" class="notice" hidden></p></section>
+<p id="settingsStatus" class="settings-status" aria-live="polite"></p>
+</div></main></div>
+<script src="assets/app.js"></script><script src="assets/settings.js"></script>
+</body></html>
